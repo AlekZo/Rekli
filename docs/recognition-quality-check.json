@@ -1,0 +1,92 @@
+{
+  "baseline": "local-parakeet-v3",
+  "samples": [
+    {
+      "language": "en",
+      "baseline_transcript": "Ask not what your country can do for you, ask what you can do for your country.",
+      "default_checks": [
+        {
+          "model": "local-parakeet-v3",
+          "ac_power": true,
+          "exact_match": true
+        },
+        {
+          "model": "local-parakeet-v3",
+          "ac_power": false,
+          "exact_match": true
+        },
+        {
+          "model": "local-auto",
+          "ac_power": true,
+          "exact_match": true
+        },
+        {
+          "model": "local-auto",
+          "ac_power": false,
+          "exact_match": true
+        }
+      ],
+      "alternatives": [
+        {
+          "model": "local-whisper-tiny",
+          "transcript": "Ask not what your country can do for you. Ask what you can do for your country.",
+          "word_edits_against_baseline": 0,
+          "normalized_baseline_words": 17
+        },
+        {
+          "model": "local-moonshine-tiny-en",
+          "transcript": "Ask not what your country can do for you. Ask what you can do for your country.",
+          "word_edits_against_baseline": 0,
+          "normalized_baseline_words": 17
+        },
+        {
+          "model": "local-moonshine-base-en",
+          "transcript": "Ask not what your country can do for you. Ask what you can do for your country.",
+          "word_edits_against_baseline": 0,
+          "normalized_baseline_words": 17
+        }
+      ]
+    },
+    {
+      "language": "ru",
+      "baseline_transcript": "Родион Потапыч высчитывал каждый новышок углубления и давно определил про себя",
+      "default_checks": [
+        {
+          "model": "local-parakeet-v3",
+          "ac_power": true,
+          "exact_match": true
+        },
+        {
+          "model": "local-parakeet-v3",
+          "ac_power": false,
+          "exact_match": true
+        },
+        {
+          "model": "local-auto",
+          "ac_power": true,
+          "exact_match": true
+        },
+        {
+          "model": "local-auto",
+          "ac_power": false,
+          "exact_match": true
+        }
+      ],
+      "alternatives": [
+        {
+          "model": "local-whisper-tiny",
+          "transcript": "Радион Потапыч выщитывал каждый новый вершок углубления и давно определил про себя.",
+          "word_edits_against_baseline": 4,
+          "normalized_baseline_words": 11
+        },
+        {
+          "model": "local-zipformer-small-ru",
+          "transcript": "родион потапыч высчитывал каждый новый вершок углубления и давно определил про себя",
+          "word_edits_against_baseline": 2,
+          "normalized_baseline_words": 11
+        }
+      ]
+    }
+  ],
+  "limitation": "Two short samples; agreement with a baseline is not an accuracy benchmark."
+}
